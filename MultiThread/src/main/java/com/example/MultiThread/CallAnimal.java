@@ -27,7 +27,10 @@ public class CallAnimal {
 		ct.start();
 		dg.start();
 		fs.start();
-		TimeUnit.SECONDS.sleep(30);
+		ct.join();
+		dg.join();
+		fs.join();
+		//TimeUnit.SECONDS.sleep(30);
 		animal=ct.getCat()+dg.getDogs()+fs.getFish();
 		System.out.println("Output: "+dg.getDogs()+fs.getFish());
 		
